@@ -15,6 +15,8 @@
 │   ├── styles.css      # 配色、字体、动画；顶部 :root 里是全部设计变量
 │   ├── main.js         # 年龄计算、生日倒计时、滚动入场、生日彩带
 │   ├── favicon.svg     # 浏览器标签小图标（篮球）
+│   ├── born.jpg        # 出生写真（成长路）
+│   ├── one-year.jpg    # 周岁写真
 │   ├── xiaoban.jpg     # 小班证件照（成长路）
 │   ├── zhongban.jpg    # 中班证件照
 │   ├── daban.jpg       # 大班证件照
@@ -27,6 +29,13 @@
 ```
 
 > 图片文件名用拼音（`xiaoban.jpg` 等）而不是中文，避免部分网络环境下 URL 编码出岔子。
+> 新照片先压小再上传（成长路的图只显示 140px 宽，640px 足够清晰）：
+>
+> ```bash
+> node -e 'require("sharp")("assets/出生.jpg").rotate().resize({width:640}).jpeg({quality:78}).toFile("assets/born.jpg")'
+> ```
+>
+> `.gitignore` 已经排除了 `出生.jpg`、`周岁.jpg` 这两张原始大图，不会被提交。
 
 ## 本地预览
 
