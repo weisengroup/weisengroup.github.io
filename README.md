@@ -21,9 +21,10 @@
 │   ├── zhongban.jpg    # 中班证件照
 │   ├── daban.jpg       # 大班证件照
 │   ├── yinianji.jpg    # 一年级证件照
-│   └── photos/         # 照片墙
-│       ├── christmas-1..4.jpg   # 圣诞写真
-│       └── rugby-1..5.jpg       # 橄榄球写真
+│   └── photos/         # 照片墙，按年龄分组
+│       ├── newborn-1..5.jpg     # 新生儿写真（2019）
+│       ├── christmas-1..4.jpg   # 五岁 · 圣诞写真
+│       └── rugby-1..5.jpg       # 五岁 · 橄榄球写真
 ├── CNAME               # 自定义域名，GitHub 靠这个文件绑定站点
 └── .nojekyll           # 告诉 GitHub 不要用 Jekyll 处理文件
 ```
@@ -146,7 +147,7 @@ git push
 
 （文件名还是建议用拼音/英文，例如 `ernianji.jpg`。）
 
-照片墙（`#photos`）加一张新照片，往 `<div class="wall">` 里塞一块，图放在 `assets/photos/`：
+照片墙（`#photos`）按年龄分组，一组一个 `<div class="wall">`，上面配一个 `.wall-group` 标题；加一张新照片就往对应的 `wall` 里塞一块，图放在 `assets/photos/`：
 
 ```html
 <figure class="polaroid reveal">
@@ -155,6 +156,7 @@ git push
 ```
 
 - 墙是三列瀑布流（`columns`），竖图横图都能混排，不用裁剪。
+- 新的一组照片（比如六岁生日）：把一对 `wall-group` + `wall` 整体复制一份放在最前面即可。
 - `width` / `height` 按图片真实像素写，可以避免加载时页面跳动。
 - 拍立得的倾斜角度、顶部胶带的颜色，都在 `styles.css` 搜「照片墙」那一段。
 

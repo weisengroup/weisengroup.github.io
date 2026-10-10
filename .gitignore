@@ -1,3 +1,7 @@
-# 原始大图：太大，不上传（已压成 born.jpg / one-year.jpg）
+# 原始大图：太大，不上传（已压成同名的小图）
 assets/出生.jpg
 assets/周岁.jpg
+assets/photos/IMG_*.jpg
+
+# 资源管理器拖进来的快捷方式
+assets/photos/*.lnk

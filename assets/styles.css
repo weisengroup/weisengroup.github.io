@@ -604,6 +604,36 @@ body {
 }
 
 /* ---------- 照片墙（拍立得） ---------- */
+.wall-group {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  margin: clamp(26px, 4vw, 44px) 0 clamp(16px, 2.6vw, 26px);
+}
+.wall-group:first-of-type { margin-top: 0; }
+.wall-group h3 {
+  margin: 0;
+  font-family: var(--f-cn);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  white-space: nowrap;
+}
+.wall-group .en {
+  font-family: var(--f-en);
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+.wall-group::after {
+  content: "";
+  flex: 1;
+  border-top: 3px dashed rgba(42, 33, 24, 0.28);
+  margin-bottom: 6px;
+}
+
 .wall { columns: 3; column-gap: clamp(16px, 2.6vw, 30px); }
 
 .polaroid {
