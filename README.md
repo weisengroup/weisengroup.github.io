@@ -13,7 +13,7 @@
 ├── index.html          # 全部内容都在这一个文件里，改文案直接编辑它
 ├── assets/
 │   ├── styles.css      # 配色、字体、动画；顶部 :root 里是全部设计变量
-│   ├── main.js         # 年龄计算、生日倒计时、滚动入场、生日彩带
+│   ├── main.js         # 年龄计算、生日倒计时、滚动入场、生日彩带、留言板开关（TWIKOO_ENV）
 │   ├── favicon.svg     # 浏览器标签小图标（篮球）
 │   ├── born.jpg        # 出生写真（成长路）
 │   ├── one-year.jpg    # 周岁写真
@@ -170,6 +170,36 @@ git push
 </figure>
 ```
 
+## 留言板（Twikoo）
+
+留言组件用 [Twikoo](https://twikoo.js.org/)，数据存在你自己的 LeanCloud 应用里。
+GitHub Pages 这边只有一个 `<div id="twikoo">`，脚本要滚到页面底部附近才会加载，不拖慢首屏。
+
+### 开通（一次性）
+
+1. 按 [Twikoo 快速开始](https://twikoo.js.org/quick-start.html) 注册 LeanCloud、创建应用、初始化数据库，拿到「环境 id」，形如 `https://xxx.lcintl.com/2020/10/xxxxxxxx`。
+2. 填进 `assets/main.js` 顶部那一行：
+
+   ```js
+   const TWIKOO_ENV = 'https://xxx.lcintl.com/2020/10/xxxxxxxx';
+   ```
+
+3. 提交推送：`git add assets/main.js && git commit -m "guestbook: connect twikoo" && git push`
+
+`TWIKOO_ENV` 是空字符串时，留言板整块（连同导航里的「留言板」）会自动隐藏，访客看不到半成品。
+
+### 先审后写（记得开）
+
+浏览器打开 `你的环境id/admin/index.html` 进管理面板：
+
+- 设置里把「评论需要审核」设为**总是**，新留言要你点「通过」才会出现在页面上。
+- 面板里可以删除、标记垃圾、导出留言。
+- 顺手配 SMTP 邮箱通知，有人留言会来信，不用天天盯。
+
+### 想关掉
+
+把 `TWIKOO_ENV` 改回 `''` 就隐藏；要彻底移除，删掉 `index.html` 的 `#guestbook` 区块和导航那一行，再删 `main.js` 末尾「留言板」那段与 `styles.css` 里搜「留言板」的那一节。
+
 ## 隐私说明
 
 这个站点是公开可访问的，所以：
@@ -177,3 +207,4 @@ git push
 - **没有**放手机号、住址、常去的场所等联系方式，也不建议以后加。
 - 学校、班级这类信息请自行斟酌，如需隐藏只要删掉 `index.html` 里对应的 `<div class="fact">` 一行即可。
 - 访客照片等如需私密，考虑放到需要登录的相册服务，而不是这个公开站点。
+- 留言板会存下访客自己填的昵称和留言内容，存在你的 LeanCloud 应用里（邮箱是选填，默认不要求）。开启「先审后写」之前别公开宣传这个入口。

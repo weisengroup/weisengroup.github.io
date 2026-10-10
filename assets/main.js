@@ -1,4 +1,4 @@
-/* 韦乐衍 · Leyan —— 年龄、生日倒计时、入场动画 */
+/* 韦乐衍 · Leyan —— 年龄、生日倒计时、入场动画、留言板 */
 
 const MONTHS = ['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月'];
 const DAY = 86400000;
@@ -59,6 +59,35 @@ if ('IntersectionObserver' in window) {
   targets.forEach(el => io.observe(el));
 } else {
   targets.forEach(el => el.classList.add('in'));
+}
+
+/* 留言板：Twikoo。留言存在自己的 LeanCloud 里，静态站本身不碰数据。
+   滚到附近才加载脚本；没填 envId 之前整块隐藏（styles.css 搜 .gb-off）。 */
+const TWIKOO_ENV = ''; // 例：https://xxx.lcintl.com/2020/10/xxxxxxxxxxxxxxx
+
+if (!TWIKOO_ENV) {
+  document.body.classList.add('gb-off');
+} else {
+  const gb = document.getElementById('guestbook');
+  const loadTwikoo = () => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/twikoo@1/dist/twikoo.all.min.js';
+    s.onload = () => twikoo.init({
+      envId: TWIKOO_ENV,
+      el: '#twikoo',
+      lang: 'zh-CN',
+      requiredFields: ['nick'], // 邮箱不必填，少收一点访客信息
+    });
+    document.body.appendChild(s);
+  };
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some(e => e.isIntersecting)) { io.disconnect(); loadTwikoo(); }
+    }, { rootMargin: '400px 0px' });
+    io.observe(gb);
+  } else {
+    loadTwikoo();
+  }
 }
 
 function confetti() {

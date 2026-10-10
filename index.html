@@ -42,6 +42,7 @@
     <a href="#growth">成长路</a>
     <a href="#photos">照片墙</a>
     <a href="#words">一句话</a>
+    <a href="#guestbook">留言板</a>
   </nav>
 </header>
 
@@ -438,12 +439,24 @@
     <p class="tiny reveal d1">这个网站会跟着乐衍一起长大。<br>以后每一年的生日，回来加一张照片、写一句话。</p>
   </section>
 
+  <!-- ---------- 留言板（Twikoo，留言存在自己的 LeanCloud，先审后显） ---------- -->
+  <section class="block guestbook" id="guestbook">
+    <div class="block-head reveal">
+      <h2>写下几句话</h2>
+      <span class="en">Guestbook</span>
+    </div>
+    <p class="gb-lead reveal d1">看过乐衍的同学、叔叔阿姨、爷爷奶奶，都可以在这里留一句话。<br>爸爸妈妈看过之后才会显示出来。</p>
+    <div class="gb-card reveal d2">
+      <div id="twikoo"></div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-foot">
   <p class="sig">韦乐衍 <span class="latin">Leyan</span> · weileyan.com</p>
   <span class="swish">SWISH!<svg viewBox="0 0 24 24"><use href="#ball"/></svg></span>
-  <p class="copy">© <span data-year>2026</span> · 这个小站由爸爸搭建，只用来记录成长，不收集访客信息</p>
+  <p class="copy">© <span data-year>2026</span> · 这个小站由爸爸搭建，只用来记录成长；留言会先由爸爸妈妈看过再放出来，不收集手机号、邮箱这些信息</p>
 </footer>
 
 <script src="./assets/main.js"></script>
