@@ -142,7 +142,6 @@ git push
 ```html
 <figure class="polaroid reveal">
   <img src="./assets/photos/2026-summer-1.jpg" alt="夏天的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
-  <figcaption>夏天写真 · 一</figcaption>
 </figure>
 ```
 
