@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>韦乐衍 · Leyan | 爱看书、爱打球的小男孩</title>
+<meta name="description" content="韦乐衍（Leyan）的个人小站：一个爱看书、爱篮球、爱足球的小学生。">
+<meta property="og:title" content="韦乐衍 · Leyan">
+<meta property="og:description" content="一个爱看书、爱篮球、爱足球的小学生。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://weileyan.com/">
+<link rel="canonical" href="https://weileyan.com/">
+<link rel="icon" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;700&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- 篮球图形，全站复用 -->
+<svg class="defs" aria-hidden="true">
+  <symbol id="ball" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="11" fill="#f2711c" stroke="#2a2118" stroke-width="1.6"/>
+    <path d="M12 1v22M1 12h22M4.6 4.6c4.4 4.4 4.4 10.4 0 14.8M19.4 4.6c-4.4 4.4-4.4 10.4 0 14.8"
+          fill="none" stroke="#2a2118" stroke-width="1.4" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- 场地边线：一颗随页面滚动的篮球 -->
+<div class="floor" aria-hidden="true">
+  <span class="floor-line"></span>
+  <svg class="floor-ball" viewBox="0 0 24 24"><use href="#ball"/></svg>
+</div>
+
+<header class="site-head">
+  <a class="mark" href="#top">Leyan<span class="cn">韦乐衍</span></a>
+  <nav>
+    <a href="#about">关于我</a>
+    <a href="#hobbies">我的爱好</a>
+    <a href="#growth">成长路</a>
+    <a href="#photos">照片墙</a>
+    <a href="#words">一句话</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- ---------- 封面 ---------- -->
+  <section class="hero">
+    <svg class="court" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 200 Q 300 120 600 200 T 1200 190" />
+      <path d="M0 240 Q 300 170 600 240 T 1200 230" />
+      <circle cx="1010" cy="70" r="46" />
+      <path d="M1010 24v92M964 70h92" />
+    </svg>
+
+    <svg class="hoop" viewBox="0 0 170 210" aria-hidden="true">
+      <path d="M85 8v14" />
+      <rect x="25" y="22" width="120" height="72" rx="6" />
+      <rect x="60" y="48" width="50" height="34" rx="3" />
+      <ellipse cx="85" cy="104" rx="30" ry="8" />
+      <path d="M56 106l10 34M114 106l-10 34M68 112l6 28M102 112l-6 28M74 140h22M66 122h38" />
+    </svg>
+
+    <div class="hero-inner">
+      <p class="kicker reveal">你好呀，欢迎来到我的小站</p>
+      <h1 class="reveal d1">
+        <span class="name-cn">韦乐衍</span>
+        <span class="name-en">Leyan</span>
+      </h1>
+      <p class="lede reveal d2">
+        <span class="hi">Hi!</span> 我叫<strong>韦乐衍</strong>，英文名 <strong>Leyan</strong>，
+        今年 <strong class="age" data-age>—</strong> 岁，
+        是狮山实验小学的一名小学生。
+        我一天中最开心的三件事：<em>看书、打球、踢足球</em>。
+      </p>
+
+      <ul class="stickers reveal d3">
+        <li class="st s-orange"><span data-age>6</span> 岁</li>
+        <li class="st s-blue">一年级</li>
+        <li class="st s-green">书虫</li>
+        <li class="st s-sun">爱笑</li>
+      </ul>
+
+      <div class="countdown reveal d4">
+        <svg class="cd-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#ball"/></svg>
+        <span class="cd-body">
+          <span class="cd-label">距离 <b data-next-birthday-age>7</b> 岁生日 · 我的计时器</span>
+          <span class="cd-num"><b data-cd-days>—</b> 天</span>
+        </span>
+        <span class="cd-date" data-birthday-counted>10 月 24 日</span>
+      </div>
+    </div>
+
+    <div class="floaters" aria-hidden="true">
+      <svg class="fl fl-1" viewBox="0 0 24 24"><use href="#ball"/></svg>
+      <svg class="fl fl-2" viewBox="0 0 24 24"><use href="#ball"/></svg>
+      <span class="fl fl-3">★</span>
+    </div>
+  </section>
+
+  <!-- ---------- 跑马灯 ---------- -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>看书 BOOKS</span><svg class="mb"><use href="#ball"/></svg><span>篮球 BASKETBALL</span><svg class="mb"><use href="#ball"/></svg><span>足球 SOCCER</span><svg class="mb"><use href="#ball"/></svg><span>进球 SWISH</span><svg class="mb"><use href="#ball"/></svg>
+      <span>看书 BOOKS</span><svg class="mb"><use href="#ball"/></svg><span>篮球 BASKETBALL</span><svg class="mb"><use href="#ball"/></svg><span>足球 SOCCER</span><svg class="mb"><use href="#ball"/></svg><span>进球 SWISH</span><svg class="mb"><use href="#ball"/></svg>
+    </div>
+  </div>
+
+  <!-- ---------- 关于我 ---------- -->
+  <section class="block" id="about">
+    <div class="block-head reveal">
+      <h2>关于我</h2>
+      <span class="en">About Leyan</span>
+    </div>
+
+    <div class="about-grid">
+      <p class="story reveal">
+        2019 年的 10 月 24 日，我来到了这个世界。<br>
+        爸爸妈妈给我取名「<b>乐衍</b>」——<b>乐</b>是快乐的乐，<b>衍</b>是蔓延、向前的意思。<br>
+        所以他们希望：<b>让快乐一直延伸下去</b>。<br>
+        <br>
+        现在的我，个子刚刚超过教室门把手，
+        最喜欢窝在沙发的一角看完一整本书，
+        也最喜欢在操场上跑得满头大汗。<br>
+        长大这件事，我正在进行中。
+      </p>
+
+      <dl class="facts reveal d1">
+        <div class="fact"><dt>生日</dt><dd>2019.10.24 <span class="tag">秋天来的孩子</span></dd></div>
+        <div class="fact"><dt>年龄</dt><dd><span data-age>6</span> 岁</dd></div>
+        <div class="fact"><dt>学校</dt><dd>狮山实验小学</dd></div>
+        <div class="fact"><dt>班级</dt><dd>一年级 6 班</dd></div>
+        <div class="fact"><dt>名字</dt><dd>韦乐衍 <span class="tag">Leyan</span></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ---------- 爱好 ---------- -->
+  <section class="block alt" id="hobbies">
+    <div class="block-head reveal">
+      <h2>我的爱好</h2>
+      <span class="en">Three Things I Love</span>
+    </div>
+
+    <div class="cards">
+      <article class="card tilt-l reveal">
+        <div class="art">
+          <svg viewBox="0 0 120 96" role="img" aria-label="一本打开的书">
+            <path class="ink" d="M60 20C48 10 30 10 16 15v64c14-5 32-5 44 5 12-10 30-10 44-5V15C90 10 72 10 60 20Z"/>
+            <path class="ink" d="M60 20v64"/>
+            <path class="thin" d="M26 31h20M26 43h20M74 31h20M74 43h20"/>
+          </svg>
+        </div>
+        <h3>看书</h3>
+        <p class="en">Reading</p>
+        <p>恐龙、宇宙、侦探故事，我都爱。<br>一本书看完，我就多去了一个地方。</p>
+        <span class="stamp">今日也读了一点</span>
+      </article>
+
+      <article class="card tilt-r reveal d1 hoops">
+        <span class="fav">★ 我的最爱</span>
+        <div class="art">
+          <svg viewBox="0 0 120 120" role="img" aria-label="篮球">
+            <circle class="ink fill-orange" cx="60" cy="60" r="42"/>
+            <path class="ink on-orange" d="M60 18v84M18 60h84M31 31c18 18 18 40 0 58M89 31c-18 18-18 40 0 58"/>
+          </svg>
+        </div>
+        <h3>篮球</h3>
+        <p class="en">Basketball</p>
+        <p>拍一下、跑一步、抬手投出去。<br>进球的那一刻，全场都是我的。</p>
+        <span class="stamp">正在练习投篮</span>
+      </article>
+
+      <article class="card tilt-l reveal d2">
+        <div class="art">
+          <svg viewBox="0 0 120 120" role="img" aria-label="足球">
+            <circle class="ink fill-green" cx="60" cy="60" r="42"/>
+            <path class="ink on-green" d="M60 34l14 10-5 17h-18l-5-17Z"/>
+            <path class="ink on-green" d="M60 18v16M84 44l-10 8M84 78l-11-6M36 78l11-6M36 44l10 8"/>
+          </svg>
+        </div>
+        <h3>足球</h3>
+        <p class="en">Soccer</p>
+        <p>和小伙伴一起传来传去，<br>跑赢了风，也跑赢了上课铃。</p>
+        <span class="stamp">下周还有球赛</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ---------- 拍球过场 ---------- -->
+  <svg class="trail" viewBox="0 0 1200 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <path class="bounce" d="M300 104 Q348 8 396 104 Q434 34 472 104 Q502 56 532 104 Q556 74 580 104 Q598 90 616 104"/>
+    <circle class="tball" cx="648" cy="94" r="14"/>
+    <g class="hoop-mini">
+      <path d="M740 20h72v44h-72z"/>
+      <ellipse cx="776" cy="74" rx="24" ry="6"/>
+      <path d="M754 78l6 24M798 78l-6 24M766 92h24"/>
+    </g>
+  </svg>
+
+  <!-- ---------- 成长路 ---------- -->
+  <section class="block" id="growth">
+    <div class="block-head reveal">
+      <h2>我的成长路</h2>
+      <span class="en">The Road So Far</span>
+    </div>
+
+    <ol class="timeline">
+      <li class="reveal">
+        <span class="dot"></span>
+        <div class="entry wide">
+          <p class="when">2019.10.24</p>
+          <p class="what">我出生啦</p>
+          <p class="note">第一次睁开眼睛，看见这个世界。</p>
+        </div>
+      </li>
+
+      <li class="reveal">
+        <span class="dot"></span>
+        <figure class="shot">
+          <img src="./assets/xiaoban.jpg" alt="小班时的乐衍" width="1080" height="1511" loading="lazy" decoding="async">
+          <figcaption>小班</figcaption>
+        </figure>
+        <div class="entry">
+          <p class="when">2022.09 · 3 岁</p>
+          <p class="what">上小班了</p>
+          <p class="note">第一天松开妈妈的手，学会了自己进教室。</p>
+        </div>
+      </li>
+
+      <li class="reveal">
+        <span class="dot"></span>
+        <figure class="shot">
+          <img src="./assets/zhongban.jpg" alt="中班时的乐衍" width="810" height="1134" loading="lazy" decoding="async">
+          <figcaption>中班</figcaption>
+        </figure>
+        <div class="entry">
+          <p class="when">2023.09 · 4 岁</p>
+          <p class="what">长高了一点点</p>
+          <p class="note">会自己穿鞋子，也交到了第一个好朋友。</p>
+        </div>
+      </li>
+
+      <li class="reveal">
+        <span class="dot"></span>
+        <figure class="shot">
+          <img src="./assets/daban.jpg" alt="大班时的乐衍" width="1280" height="1792" loading="lazy" decoding="async">
+          <figcaption>大班</figcaption>
+        </figure>
+        <div class="entry">
+          <p class="when">2024.09 · 5 岁</p>
+          <p class="what">大班，最爱跑</p>
+          <p class="note">开始能连续拍好几个球，也迷上了看书。</p>
+        </div>
+      </li>
+
+      <li class="reveal">
+        <span class="dot"></span>
+        <figure class="shot">
+          <img src="./assets/yinianji.jpg" alt="一年级的乐衍" width="1280" height="1792" loading="lazy" decoding="async">
+          <figcaption>一年级</figcaption>
+        </figure>
+        <div class="entry">
+          <p class="when">2025.09 · 6 岁</p>
+          <p class="what">背上书包，成为小学生</p>
+          <p class="note">狮山实验小学 · 一年级 6 班，认识了很多新名字。</p>
+        </div>
+      </li>
+
+      <li class="reveal doing">
+        <span class="dot"></span>
+        <div class="entry wide">
+          <p class="when">现在</p>
+          <p class="what">继续长高、继续读书、继续进球</p>
+          <p class="note">这一条是留白，等着以后写上去。</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ---------- 照片墙 ---------- -->
+  <section class="block gallery" id="photos">
+    <div class="block-head reveal">
+      <h2>我的照片墙</h2>
+      <span class="en">Photo Wall</span>
+    </div>
+
+    <div class="wall">
+      <figure class="polaroid reveal">
+        <img src="./assets/photos/christmas-1.jpg" alt="穿红色圣诞毛衣、举着拐杖糖的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>圣诞写真 · 一</figcaption>
+      </figure>
+      <figure class="polaroid reveal d1">
+        <img src="./assets/photos/rugby-1.jpg" alt="戴墨镜抱着橄榄球的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>橄榄球写真 · 一</figcaption>
+      </figure>
+      <figure class="polaroid reveal d2">
+        <img src="./assets/photos/christmas-2.jpg" alt="圣诞写真中的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>圣诞写真 · 二</figcaption>
+      </figure>
+      <figure class="polaroid reveal">
+        <img src="./assets/photos/rugby-2.jpg" alt="橄榄球写真中的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>橄榄球写真 · 二</figcaption>
+      </figure>
+      <figure class="polaroid reveal d1">
+        <img src="./assets/photos/christmas-3.jpg" alt="低头拆圣诞礼物的乐衍" width="1536" height="1024" loading="lazy" decoding="async">
+        <figcaption>圣诞写真 · 三</figcaption>
+      </figure>
+      <figure class="polaroid reveal d2">
+        <img src="./assets/photos/rugby-3.jpg" alt="橄榄球写真中的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>橄榄球写真 · 三</figcaption>
+      </figure>
+      <figure class="polaroid reveal">
+        <img src="./assets/photos/christmas-4.jpg" alt="圣诞写真中的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>圣诞写真 · 四</figcaption>
+      </figure>
+      <figure class="polaroid reveal d1">
+        <img src="./assets/photos/rugby-4.jpg" alt="橄榄球写真中的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>橄榄球写真 · 四</figcaption>
+      </figure>
+      <figure class="polaroid reveal d2">
+        <img src="./assets/photos/rugby-5.jpg" alt="橄榄球写真中的乐衍" width="1024" height="1536" loading="lazy" decoding="async">
+        <figcaption>橄榄球写真 · 五</figcaption>
+      </figure>
+    </div>
+
+    <p class="wall-note">一年拍几组，墙上就多几张照片。</p>
+  </section>
+
+  <!-- ---------- 一句话 ---------- -->
+  <section class="block alt words" id="words">
+    <blockquote class="reveal">
+      <p class="said">让快乐一直延伸下去。</p>
+      <footer><span class="rule"></span>爸爸妈妈取名的愿望 · 也是这个小站的名字由来</footer>
+    </blockquote>
+    <p class="tiny reveal d1">这个网站会跟着乐衍一起长大。<br>以后每一年的生日，回来加一张照片、写一句话。</p>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <p class="sig">韦乐衍 <span class="latin">Leyan</span> · weileyan.com</p>
+  <span class="swish">SWISH!<svg viewBox="0 0 24 24"><use href="#ball"/></svg></span>
+  <p class="copy">© <span data-year>2026</span> · 这个小站由爸爸搭建，只用来记录成长，不收集访客信息</p>
+</footer>
+
+<script src="./assets/main.js"></script>
+</body>
+</html>
