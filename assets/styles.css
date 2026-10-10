@@ -715,40 +715,6 @@ body {
 .words .rule { width: 54px; height: 3px; background: var(--orange); border-radius: 3px; }
 .words .tiny { margin: 34px auto 0; color: var(--ink-soft); font-size: 0.95rem; }
 
-/* ---------- 留言板 ---------- */
-/* main.js 里没填 LeanCloud 地址时，整块连同导航一起隐藏，不给访客看半成品 */
-.gb-off #guestbook,
-.gb-off .site-head a[href="#guestbook"] { display: none; }
-
-.gb-lead {
-  margin: 0 0 clamp(18px, 3vw, 28px);
-  color: var(--ink-soft);
-  line-height: 1.9;
-}
-.gb-card {
-  padding: clamp(14px, 2.6vw, 26px);
-  background: var(--card);
-  border: var(--edge);
-  border-radius: 14px;
-  box-shadow: var(--pop);
-}
-/* Twikoo 组件：把蓝色系换成本站的粗线条贴纸风 */
-.gb-card .tk-avatar img {
-  border: 2px solid var(--ink);
-  border-radius: 50%;
-}
-.gb-card .tk-nick { font-weight: 700; color: var(--ink); }
-.gb-card .tk-time,
-.gb-card .tk-extras { color: var(--ink-soft); }
-.gb-card .tk-content { line-height: 1.85; }
-.gb-card .tk-input { border-color: var(--ink); }
-.gb-card .tk-btn[type="submit"] {
-  background: var(--orange);
-  border: 2px solid var(--ink);
-  border-radius: 8px;
-  box-shadow: 3px 3px 0 rgba(42, 33, 24, 0.18);
-}
-
 /* ---------- 页脚 ---------- */
 .site-foot {
   border-top: var(--edge);
