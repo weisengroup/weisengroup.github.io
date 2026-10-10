@@ -23,6 +23,7 @@
 │   ├── yinianji.jpg    # 一年级证件照
 │   └── photos/         # 照片墙，按年龄分组
 │       ├── newborn-1..5.jpg     # 新生儿写真（2019）
+│       ├── one-year-01..19.jpg  # 周岁写真（2020）
 │       ├── christmas-1..4.jpg   # 五岁 · 圣诞写真
 │       └── rugby-1..5.jpg       # 五岁 · 橄榄球写真
 ├── CNAME               # 自定义域名，GitHub 靠这个文件绑定站点

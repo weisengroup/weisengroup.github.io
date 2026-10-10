@@ -634,6 +634,14 @@ body {
   margin-bottom: 6px;
 }
 
+.wall-desc {
+  margin: -0.9em 0 clamp(18px, 2.8vw, 28px);
+  font-family: var(--f-hand);
+  font-size: clamp(1.02rem, 2.1vw, 1.22rem);
+  line-height: 1.8;
+  color: var(--ink-soft);
+}
+
 .wall { columns: 3; column-gap: clamp(16px, 2.6vw, 30px); }
 
 .polaroid {
